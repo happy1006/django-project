@@ -30,6 +30,8 @@ urlpatterns = [
     path('accounts/', include("django.contrib.auth.urls")),
     path('posts/', include("posts.urls", namespace="posts")),
     path('groups/',include("groups.urls", namespace="groups")),
+
+    
     url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}),
     url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
 ]
